@@ -32,7 +32,10 @@
 from openerp import api, models, fields, _
 
 from openerp.report import interface
-import cups
+try:
+    import cups
+except ImportError:
+    pass
 from tempfile import NamedTemporaryFile
 import md5
 
